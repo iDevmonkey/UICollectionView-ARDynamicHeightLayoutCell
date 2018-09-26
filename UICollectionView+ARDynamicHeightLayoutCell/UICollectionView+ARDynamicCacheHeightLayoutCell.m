@@ -137,10 +137,10 @@ typedef NS_ENUM(NSUInteger, ARDynamicSizeCaculateType) {
                                     multiplier:1
                                       constant:fixedValue];
     [cell.contentView addConstraint:tempConstraint];
-    size = [cell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     [cell.contentView removeConstraint:tempConstraint];
   } else {
-    size = [cell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
   }
 
   NSMutableDictionary *sectionCache = [self sizeCache][indexPath.section];
